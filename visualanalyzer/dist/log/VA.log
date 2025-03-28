@@ -1,0 +1,8 @@
+generated new fontManager
+isUserAdmin - CheckTokenMembership returned: False
+generated new fontManager
+isUserAdmin - CheckTokenMembership returned: True
+2024-01-30 14:40:36.446 [DdsApi.pyc] [__init__] [91] initialize for StrobeTime 1 StrobeTime..
+2024-01-30 14:40:36.546 [DdsApi.pyc] [__init__] [91] initialize for VA 1 VFIDACK..
+2024-01-30 14:40:36.579 [DdsApi.pyc] [__init__] [91] initialize for VA 1 vRun..
+2024-01-30 14:40:36.610 [DdsApi.pyc] [__init__] [91] initialize for VA 1 VRUNACK..

@@ -1,0 +1,279 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>5c286450-7870-4672-a00a-06bec322bbdf</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>visual_analyzer.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>visualanalyzer</Name>
+    <RootNamespace>visualanalyzer</RootNamespace>
+    <InterpreterId>Global|PythonCore|3.11</InterpreterId>
+    <SuppressPackageInstallationPrompt>True</SuppressPackageInstallationPrompt>
+    <IsWindowsApplication>False</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="data_export_thread.py" />
+    <Compile Include="data_type.py" />
+    <Compile Include="db_handler.py" />
+    <Compile Include="DDSApi\DdsApi.py" />
+    <Compile Include="DdsHeader.py" />
+    <Compile Include="define.py" />
+    <Compile Include="draw.py" />
+    <Compile Include="figure_canvas.py" />
+    <Compile Include="if_db.py" />
+    <Compile Include="KYITopics\DdsGrabberCommandEnd.py" />
+    <Compile Include="KYITopics\DdsGrabberCommandStart.py" />
+    <Compile Include="KYITopics\DdsGrabberEnd.py" />
+    <Compile Include="KYITopics\DdsGrabberReinitEnd.py" />
+    <Compile Include="KYITopics\DdsGrabberReinitStart.py" />
+    <Compile Include="KYITopics\DdsGrabberStart.py" />
+    <Compile Include="KYITopics\DdsGrabDoneEnd.py" />
+    <Compile Include="KYITopics\DdsGrabDoneStart.py" />
+    <Compile Include="KYITopics\DdsGrabEnd.py" />
+    <Compile Include="KYITopics\grabber_command_end_parser.py" />
+    <Compile Include="KYITopics\grabber_command_start_parser.py" />
+    <Compile Include="KYITopics\grabber_end_parser.py" />
+    <Compile Include="KYITopics\grabber_reinit_end_parser.py" />
+    <Compile Include="KYITopics\grabber_reinit_start_parser.py" />
+    <Compile Include="KYITopics\grabber_start_parser.py" />
+    <Compile Include="KYITopics\grab_done_end_parser.py" />
+    <Compile Include="KYITopics\grab_done_start_parser.py" />
+    <Compile Include="KYITopics\grab_end_parser.py" />
+    <Compile Include="KYITopics\grab_start_parser.py" />
+    <Compile Include="KYITopics\KyiTopicHandler.py" />
+    <Compile Include="KYITopics\strobe_on_off_time_data_handler.py" />
+    <Compile Include="kyi_handler.py" />
+    <Compile Include="MCSTopics\CycleTime\CycleTimeParser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\DDS_FID_INSP_END.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\DDS_FID_INSP_START.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\DDS_FOV_INSP_END.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\DDS_FOV_INSP_START.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\DDS_LANE_INSP_END.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\DDS_LANE_INSP_START.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\DDS_OPRUN_END.py" />
+    <Compile Include="MCSTopics\CycleTime\DDS_OPRUN_START.py" />
+    <Compile Include="MCSTopics\CycleTime\DDS_PCB_INSP_END.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\DDS_PCB_INSP_START.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\DDS_SMEMA.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\DDS_TRANSFER_TIME_END.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\DDS_TRANSFER_TIME_START.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\DDS_TURNAROUND_TIME_END.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\DDS_TURNAROUND_TIME_START.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\FID_INSP_END_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\FID_INSP_START_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\FOV_INSP_END_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\FOV_INSP_START_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\LANE_INSP_END_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\LANE_INSP_START_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\OPRUN_END_Parser.py" />
+    <Compile Include="MCSTopics\CycleTime\OPRUN_START_Parser.py" />
+    <Compile Include="handle_json.py" />
+    <Compile Include="KYITopics\DdsGrabStart.py" />
+    <Compile Include="KYITopics\DdsStrobeTime.py" />
+    <Compile Include="main_win.py" />
+    <Compile Include="MCSTopics\CycleTime\PCB_INSP_END_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\PCB_INSP_START_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\SMEMA_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\TRANSFER_TIME_END_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\TRANSFER_TIME_START_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\TURNAROUND_TIME_END_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\CycleTime\TURNAROUND_TIME_START_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\McsTopicHandler.py" />
+    <Compile Include="MCSTopics\PCBStatus\DDS_NOT_EXIST.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\DDS_PCB_ENTRY_PASSED_INCOME_PASSING.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\DDS_PCB_INCOME_PASSING.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\DDS_PCB_INSP_DONE_STATUS.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\DDS_PCB_IN_JAM.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\DDS_PCB_IN_STATUS.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\DDS_PCB_JUST_PASSED_ENTRY_IN_STATUS.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\DDS_PCB_OUTLET_PASSING.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\DDS_PCB_OUT_JAM.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\DDS_PCB_OUT_NEXT_DONE_STATUS.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\DDS_PCB_OUT_NEXT_STATUS.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\DDS_PCB_OUT_STATUS.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\DDS_PCB_WAIT_INSP_DONE_STATUS.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\DDS_PCB_WORK_STATUS.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\NOT_EXIST_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\PCBStatusParser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\PCB_ENTRY_PASSED_INCOME_PASSING_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\PCB_INCOME_PASSING_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\PCB_INSP_DONE_STATUS_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\PCB_IN_JAM_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\PCB_IN_STATUS_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\PCB_JUST_PASSED_ENTRY_IN_STATUS_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\PCB_OUTLET_PASSING_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\PCB_OUT_JAM_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\PCB_OUT_NEXT_DONE_STATUS_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\PCB_OUT_NEXT_STATUS_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\PCB_OUT_STATUS_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\PCB_WAIT_INSP_DONE_STATUS_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCSTopics\PCBStatus\PCB_WORK_STATUS_Parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mcs_cycle_time_handler.py" />
+    <Compile Include="mcs_pcb_status_handler.py" />
+    <Compile Include="strobe_on_off_time_handler.py" />
+    <Compile Include="visual_analyzer.py" />
+    <Compile Include="visual_analyzer_rc.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="db\kyi.json" />
+    <Content Include="db\mcs_cycle_time.json" />
+    <Content Include="db\mcs_pcb_status.json" />
+    <Content Include="db\strobe_on_off_time.json" />
+    <Content Include="visual_analyzer.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.11" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="db\" />
+    <Folder Include="DDSApi\" />
+    <Folder Include="KYITopics\" />
+    <Folder Include="MCSTopics\" />
+    <Folder Include="MCSTopics\CycleTime\" />
+    <Folder Include="MCSTopics\PCBStatus\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.11</Version>
+      <Description>env (Python 3.11 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

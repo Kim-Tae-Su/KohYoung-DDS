@@ -1,0 +1,1 @@
+2024-01-30 14:40:36.620 [RTPS_MSG_OUT Error] error: couldn't generate segment_name -> Function eprosima::fastdds::rtps::SharedMemTransport::init

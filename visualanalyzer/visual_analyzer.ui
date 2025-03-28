@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>2000</width>
+    <height>865</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Visual Analyzer</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <widget class="QScrollArea" name="scroll_strobe">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>30</y>
+      <width>120</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="widgetResizable">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>118</width>
+       <height>78</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QScrollArea" name="scroll_mcs_ct">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>30</y>
+      <width>120</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="widgetResizable">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>118</width>
+       <height>78</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QScrollArea" name="scroll_mcs_pcb">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>30</y>
+      <width>120</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="widgetResizable">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>118</width>
+       <height>78</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QListWidget" name="output">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>300</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>2000</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuDB">
+    <property name="title">
+     <string>DB</string>
+    </property>
+    <widget class="QMenu" name="menuLoad_Data_From_DB">
+     <property name="title">
+      <string>Load Data From DB</string>
+     </property>
+     <addaction name="actionLoadStrobe_on_off_time"/>
+     <addaction name="actionLoadMCS_Cycle_Time"/>
+     <addaction name="actionLoadMCS_PCB_Status"/>
+    </widget>
+    <addaction name="menuLoad_Data_From_DB"/>
+   </widget>
+   <addaction name="menuDB"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionLoadStrobe_on_off_time"/>
+   <addaction name="actionLoadMCS_PCB_Status"/>
+   <addaction name="actionLoadMCS_Cycle_Time"/>
+  </widget>
+  <action name="actionLoadStrobe_on_off_time">
+   <property name="icon">
+    <iconset resource="resource/visual_analyzer.qrc">
+     <normaloff>:/icon/database.png</normaloff>:/icon/database.png</iconset>
+   </property>
+   <property name="text">
+    <string>Strobe on off time</string>
+   </property>
+  </action>
+  <action name="actionLoadMCS_Cycle_Time">
+   <property name="icon">
+    <iconset resource="resource/visual_analyzer.qrc">
+     <normaloff>:/icon/database3.png</normaloff>:/icon/database3.png</iconset>
+   </property>
+   <property name="text">
+    <string>MCS Cycle Time</string>
+   </property>
+  </action>
+  <action name="actionLoadMCS_PCB_Status">
+   <property name="icon">
+    <iconset resource="resource/visual_analyzer.qrc">
+     <normaloff>:/icon/database2.png</normaloff>:/icon/database2.png</iconset>
+   </property>
+   <property name="text">
+    <string>MCS PCB Status</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resource/visual_analyzer.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionLoadStrobe_on_off_time</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>menu_load_strobe_on_off_time()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>59</x>
+     <y>49</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionLoadMCS_Cycle_Time</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>menu_load_mcs_cycle_time()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>227</x>
+     <y>62</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionLoadMCS_PCB_Status</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>menu_load_mcs_pcb_status()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>607</x>
+     <y>432</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>click_btn_strobe_on_off_time()</slot>
+  <slot>menu_load_strobe_on_off_time()</slot>
+  <slot>menu_load_mcs_cycle_time()</slot>
+  <slot>menu_load_mcs_pcb_status()</slot>
+  <slot>click_btn_mcs_pcb_status()</slot>
+  <slot>click_btn_mcs_cycle_time()</slot>
+  <slot>resize_full()</slot>
+ </slots>
+</ui>

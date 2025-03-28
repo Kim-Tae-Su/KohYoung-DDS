@@ -1,0 +1,1122 @@
+[
+    {
+        "domain": 1,
+        "topic": "VFIDACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:36:942000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:37:173000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "182.431",
+            "173.293"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:37:177000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:37:362000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "160.659",
+            "185.317"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:37:365000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:37:579000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "136.444",
+            "158.255"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:37:584000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:37:782000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "110.680",
+            "170.917"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:37:787000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:37:986000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "83.140",
+            "191.166"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:37:990000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:38:188000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "58.710",
+            "188.106"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:38:193000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:38:391000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "35.358",
+            "178.259"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:38:396000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:38:579000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "14.162",
+            "189.318"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:38:584000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:38:800000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "38.102",
+            "159.879"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:38:802000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:38:970000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "44.102",
+            "163.292"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:38:975000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:39:110000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "47.951",
+            "164.941"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:39:115000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:39:329000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "93.909",
+            "160.759"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:39:334000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:39:534000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "122.143",
+            "156.449"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:39:537000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:39:729000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "148.634",
+            "161.958"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:39:736000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:39:951000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "183.302",
+            "151.173"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:39:955000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:40:139000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "193.539",
+            "160.021"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:40:142000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:40:326000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "183.343",
+            "149.105"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:40:330000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:40:513000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "160.189",
+            "136.329"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:40:517000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:40:703000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "134.291",
+            "135.199"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:40:719000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:40:887000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "119.238",
+            "135.050"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:40:892000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:41:107000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "87.196",
+            "136.345"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:41:111000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:41:309000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "60.127",
+            "138.105"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:41:314000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:41:481000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "54.090",
+            "137.873"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:41:486000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:41:714000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "18.607",
+            "172.529"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:41:720000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:41:993000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "19.426",
+            "104.404"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:41:997000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:42:196000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "45.379",
+            "112.236"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:42:201000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:42:431000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "70.684",
+            "142.987"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:42:435000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:42:649000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "97.617",
+            "112.599"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:42:654000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:42:847000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "122.905",
+            "111.763"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:42:851000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:43:035000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "147.933",
+            "112.530"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:43:039000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:43:268000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "177.073",
+            "148.883"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:43:273000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:43:503000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "194.927",
+            "108.524"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:43:508000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:43:706000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "193.805",
+            "91.900"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:43:721000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:43:981000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "130.587",
+            "82.316"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:43:985000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:44:184000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "104.406",
+            "80.689"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:44:189000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:44:387000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "78.979",
+            "81.312"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:44:392000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:44:590000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "52.136",
+            "85.258"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:44:594000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:44:804000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "25.389",
+            "80.734"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:44:808000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:44:976000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "10.039",
+            "82.639"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:44:980000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:45:303000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "158.650",
+            "93.038"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:45:308000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:45:554000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "131.155",
+            "49.944"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:45:558000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:45:796000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "105.463",
+            "89.749"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:45:802000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:46:031000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "76.192",
+            "57.348"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:46:036000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:46:234000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "47.287",
+            "42.852"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:46:239000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:46:437000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "23.022",
+            "52.601"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:46:442000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:46:656000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "25.594",
+            "24.920"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:46:660000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:46:855000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "51.633",
+            "29.554"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:46:857000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:47:056000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "79.345",
+            "26.602"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:47:060000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:47:259000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "101.173",
+            "23.134"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:47:264000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:47:480000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "133.524",
+            "52.415"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:47:482000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:47:696000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "158.150",
+            "24.255"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:47:701000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:47:895000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "141.071",
+            "8.110"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:47:899000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:48:145000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "94.568",
+            "49.447"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:48:149000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:48:379000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "68.465",
+            "8.349"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:48:383000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:48:566000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "40.712",
+            "11.338"
+        ]
+    },
+    {
+        "domain": 1,
+        "topic": "VRUNACK",
+        "cmd": "GUItoMCS",
+        "datetime": "2024/02/19_17:09:48:571000",
+        "seq": "FOV_MOVE",
+        "state": 0
+    },
+    {
+        "domain": 1,
+        "topic": "vRun",
+        "cmd": "MCStoGUI",
+        "datetime": "2024/02/19_17:09:48:767000",
+        "seq": "FOV_MOVE",
+        "state": 1,
+        "coordinate": [
+            "21.197",
+            "29.525"
+        ]
+    }
+]

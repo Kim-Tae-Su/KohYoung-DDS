@@ -1,0 +1,1 @@
+pyinstaller --clean -F visual_analyzer.py
