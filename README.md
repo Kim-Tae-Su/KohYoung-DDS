@@ -1,8 +1,8 @@
-# DDS 기반 제어 SW APP 간 통신 인프라 설계 및 구현
+# DDS 기반 SW APP 간 통신 인프라 설계 및 구현
 
 ## 1. 프로젝트 개요
 
-- 프로젝트명: DDS 기반 제어 SW APP 간 통신 인프라 설계 및 구현
+- 프로젝트명: DDS 기반 SW APP 간 통신 인프라 설계 및 구현
 - 프로젝트 소속: 고영테크놀러지
 - 프로젝트 기간: 2023.06 ~ 2023.09
 - 프로젝트 인원: 4명
@@ -11,42 +11,43 @@
 본 프로젝트는 사내 SW APP 간 통신 구조를 개선하기 위해  
 DDS(Data Distribution Service) 미들웨어 기반 통신 인프라를 구축한 프로젝트이다.
 
-기존 시스템은 기계의 기능 및 모듈별로 APP이 분리되어 있었으며,  
-각 APP은 Server-Client 기반 Socket 통신으로 연결된 복잡한 구조를 가지고 있었다.
+기존 시스템은 기계의 기능 및 모듈별로 APP이 분리되어 있고
+각 APP은 Server-Client 기반 Socket 통신으로 연결된 복잡한 구조를 가지고 있다.
 
 이로 인해 통신 경로 확장 시 구조 복잡도가 급격히 증가하고,  
-메시지 지연, 손실, 확장성 및 유지보수 측면에서 한계가 존재하였다.
+메시지 지연, 손실, 확장성 및 유지보수 측면에서 한계가 존재한다.
 
 본 프로젝트에서는 DDS 미들웨어를 도입하여 APP 간 통신 구조를 단순화하고,  
 Monolithic Architecture(MA)에서 Microservices Architecture(MSA)로  
-전환을 위한 통신 인프라 기반을 마련하는 것을 목표로 하였다..
+전환을 위한 통신 인프라 기반을 마련하는 것을 목표로 한다.
 
 
 ---
 
 ### DDS 개요
 
-DDS(Data Distribution Service)는 중앙 브로커 없이 Publisher와 Subscriber가  
-Topic 기반으로 직접 통신하는 분산 Pub/Sub 미들웨어이다.
+DDS(Data Distribution Service)는 중앙 브로커 없이 Publisher와 Subscriber가
+Topic 기반으로 직접 통신하는 분산형 Pub/Sub 미들웨어이다.
 
-DDS는 실시간 시스템을 대상으로 설계된 미들웨어로,
-낮은 지연 시간, QoS(Quality of Service) 기반 데이터 전달 보장, 
-그리고 느슨한 결합(Loose Coupling) 구조 등의 특징을 가진다.
+DDS는 실시간 시스템(real-time system)을 주요 대상으로 설계되었으며,
+낮은 지연 시간(Low Latency), QoS(Quality of Service) 기반 데이터 전달 보장,
+그리고 느슨한 결합(Loose Coupling) 구조를 핵심 특징으로 가진다.
 
-이러한 특성으로 인해 DDS는 실시간 제어 시스템에 적합한 통신 미들웨어로 활용된다.
+이러한 특성으로 인해 DDS는 통신 지연이나 데이터 유실이 시스템 안정성에 직접적인 영향을 미치는
+실시간 제어 시스템에 적합한 통신 미들웨어로 활용된다.
 
-<img src="images/dds.png" alt="DDS Architecture Diagram" width="500"/>
+<img src="images/dds.png" alt="DDS Architecture Diagram" width="600"/>
 
 ---
 
 ### 시스템 아키텍처
 각 APP은 자체 DDS Core를 내장하고 있으며,
-Publisher 및 Subscriber 역할을 동시에 수행한다.
+하나의 프로세스 내에서 Publisher와 Subscriber 역할을 동시에 수행하도록 설계되어 있다.
 
-각 APP 프로세스에 내장된 DDS Core는 중앙 브로커 없이
-Topic 기반 Pub/Sub 구조로 직접 peer-to-peer 통신하도록 설계하였다.
+이를 통해 각 APP은 데이터 생산자이자 소비자로서 동작하며,
+외부 통신 서버나 중앙 브로커에 의존하지 않고 독립적으로 데이터 교환에 참여한다.
 
-<img src="images/architecture.png" alt="Application-level DDS Architecture with Embedded DDS Core" width="500"/>
+<img src="images/architecture.png" alt="Application-level DDS Architecture with Embedded DDS Core" width="650"/>
 
 
 ---
@@ -79,7 +80,7 @@ Topic 기반 Pub/Sub 구조로 직접 peer-to-peer 통신하도록 설계하였�
 ### DDS Core 이슈 분석
 - DDS 통신 과정에서 발생하는 지연 및 메시지 유실 현상 재현
 - DDS Core 내부 큐 처리 및 스케줄링 동작을 중심으로 분석
-- Core 버그 원인 분석 및 패치 방향 제안
+
 
 ---
 
