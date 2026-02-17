@@ -33,11 +33,18 @@ DDS는 실시간 시스템을 대상으로 설계된 미들웨어로,
 낮은 지연 시간, QoS(Quality of Service) 기반 데이터 전달 보장, 
 그리고 느슨한 결합(Loose Coupling) 구조 등의 특징을 가진다.
 
+이러한 특성으로 인해 DDS는 실시간 제어 시스템에 적합한 통신 미들웨어로 활용된다.
+
+<img src="images/dds.png" alt="DDS Architecture Diagram" width="500"/>
+
 ---
 
 ### 시스템 아키텍처
-각 APP은 DDS 미들웨어를 통해 Publisher / Subscriber 역할을 수행하며,  
-중앙 브로커 없이 Topic 기반 Pub/Sub 구조로 직접 통신하도록 설계하였다.
+각 APP은 자체 DDS Core를 내장하고 있으며,
+Publisher 및 Subscriber 역할을 동시에 수행한다.
+
+각 APP 프로세스에 내장된 DDS Core는 중앙 브로커 없이
+Topic 기반 Pub/Sub 구조로 직접 peer-to-peer 통신하도록 설계하였다.
 
 ---
 
@@ -119,6 +126,9 @@ DDS는 실시간 시스템을 대상으로 설계된 미들웨어로,
 - 멀티스레딩 기반 DDS Data Collector 모듈 개발
 - 토픽 간 간섭 없이 병렬 수신 가능하도록 구조 개선
 
+
+<img src="images/change.png" alt="DDS 구조 변경 전후" width="500"/>
+
 ---
 
 ## 3-1. DDS Communication Flow
@@ -141,6 +151,17 @@ DDS 기반 APP 간 통신 흐름은 다음과 같이 구성하였다.
   - Core 버그 발견 및 내부 공유
 - 전체 시스템의 모듈화 및 유지보수 효율성 향상
 - 멀티스레딩 기반 수신 모듈(DDS Data Collector) 개발 및 적용
+
+### DDS 데이터 흐름 검증 및 시각화
+
+DDS 통신 구조 변경 이후,  
+DDS 데이터 시각화 툴을 활용하여  
+토픽별 데이터 수신 상태 및 메시지 흐름을 확인하였다.
+
+
+<img src="images/visual.png" alt="DDS Data Visualization Tool" width="500"/>
+
+
 
 ---
 
