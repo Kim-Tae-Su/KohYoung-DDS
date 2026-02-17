@@ -19,7 +19,7 @@ DDS(Data Distribution Service) 미들웨어 기반 통신 인프라를 구축한
 
 본 프로젝트에서는 DDS 미들웨어를 도입하여 APP 간 통신 구조를 단순화하고,  
 Monolithic Architecture(MA)에서 Microservices Architecture(MSA)로  
-시스템 구조를 전환하는 것을 목표로 하였다.
+전환을 위한 통신 인프라 기반을 마련하는 것을 목표로 하였다..
 
 
 ---
@@ -45,6 +45,9 @@ Publisher 및 Subscriber 역할을 동시에 수행한다.
 
 각 APP 프로세스에 내장된 DDS Core는 중앙 브로커 없이
 Topic 기반 Pub/Sub 구조로 직접 peer-to-peer 통신하도록 설계하였다.
+
+<img src="images/architecture.png" alt="Application-level DDS Architecture with Embedded DDS Core" width="500"/>
+
 
 ---
 
@@ -75,7 +78,7 @@ Topic 기반 Pub/Sub 구조로 직접 peer-to-peer 통신하도록 설계하였�
 
 ### DDS Core 이슈 분석
 - DDS 통신 과정에서 발생하는 지연 및 메시지 유실 현상 재현
-- DDS Core 내부 큐 처리 및 스케줄링 동작 분석
+- DDS Core 내부 큐 처리 및 스케줄링 동작을 중심으로 분석
 - Core 버그 원인 분석 및 패치 방향 제안
 
 ---
@@ -127,6 +130,9 @@ Topic 기반 Pub/Sub 구조로 직접 peer-to-peer 통신하도록 설계하였�
 - 토픽 간 간섭 없이 병렬 수신 가능하도록 구조 개선
 
 
+해당 구조 개선을 통해 커맨드 메시지 지연 및 유실 현상이 재현되지 않음을 확인하였다.
+
+
 <img src="images/change.png" alt="DDS 구조 변경 전후" width="500"/>
 
 ---
@@ -144,13 +150,14 @@ DDS 기반 APP 간 통신 흐름은 다음과 같이 구성하였다.
 
 ## 4. 결과 및 성과
 
-- DDS 통신 모듈 개선 후 **시스템 메시지 전달 지연 시간 1ms 수준으로 구현**
+- DDS 통신 모듈 개선 후 시스템 메시지 전달 지연 시간 1ms 수준으로 구현
+  - 실시간 제어 요구사항을 만족하는 응답 성능 확보
 - 토픽 분리 설계를 통해 메시지 유실 및 지연 문제 해결
 - 시스템 구성 변경 없이 신규 서비스 및 통신 경로 확장 가능
 - DDS Core 안정성 개선에 기여
   - Core 버그 발견 및 내부 공유
 - 전체 시스템의 모듈화 및 유지보수 효율성 향상
-- 멀티스레딩 기반 수신 모듈(DDS Data Collector) 개발 및 적용
+- Subscriber 측에서 Topic별 Listener 및 Thread 기반으로 병렬 수신 처리
 
 ### DDS 데이터 흐름 검증 및 시각화
 
