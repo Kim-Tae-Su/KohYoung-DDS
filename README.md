@@ -2,45 +2,76 @@
 
 ## 1. 프로젝트 개요
 
-- 프로젝트명: DDS 기반 SW APP 간 통신 인프라 설계 및 구현
-- 프로젝트 소속: 고영테크놀러지
-- 프로젝트 기간: 2023.06 ~ 2023.09
-- 프로젝트 인원: 4명
+- **프로젝트명**: DDS 기반 SW APP 간 통신 인프라 설계 및 구현
+- **소속**: 고영테크놀러지
+- **기간**: 2023.06 ~ 2023.09
+- **인원**: 5명
 
-### 프로젝트 개요
-본 프로젝트는 사내 SW APP 간 통신 구조를 개선하기 위해  
-DDS(Data Distribution Service) 미들웨어 기반 통신 인프라를 구축한 프로젝트이다.
+### 프로젝트 목표
 
-기존 시스템은 기계의 기능 및 모듈별로 APP이 분리되어 있고
-각 APP은 Server-Client 기반 Socket 통신으로 연결된 복잡한 구조를 가지고 있다.
+기존 반도체 장비 SW 시스템은 기능 및 모듈별 APP이  
+Server-Client 기반 Socket 통신으로 개별 연결된 구조로 구성되어 있었다.
 
-이로 인해 통신 경로 확장 시 구조 복잡도가 급격히 증가하고,  
-메시지 지연, 손실, 확장성 및 유지보수 측면에서 한계가 존재한다.
+이로 인해 APP 수 증가에 따라 통신 경로와 의존성이 복잡해지고,  
+메시지 지연 및 유지보수 비용 증가 문제가 발생하였다.
 
-본 프로젝트에서는 DDS 미들웨어를 도입하여 APP 간 통신 구조를 단순화하고,  
-Monolithic Architecture(MA)에서 Microservices Architecture(MSA)로  
-전환을 위한 통신 인프라 기반을 마련하는 것을 목표로 한다.
+본 프로젝트에서는 DDS(Data Distribution Service) 기반 통신 미들웨어를 도입하여,
+
+- APP 간 통신 구조 단순화
+- 실시간 제어 환경에 적합한 저지연 통신 구현
+- QoS 기반 안정적인 데이터 전달 환경 구축
+- 확장 가능한 Pub/Sub 기반 통신 구조 설계
+- MA(Monolithic Architecture) → MSA(Microservices Architecture) 전환 기반 마련
+
+을 목표로 통신 인프라를 설계·구현하였다.
 
 
----
+### 기술 선정 배경
+기존 시스템은 APP 간 Socket API 기반 Point-to-Point 통신 구조로 구성되어 있었기 때문에,  
+신규 APP 추가 시 연결 관계가 증가하면서 시스템 복잡도가 급격히 증가하는 문제가 존재하였다.
+
+또한 실시간 제어 환경에서는 통신 지연(Latency) 및 데이터 유실이  
+장비 안정성과 직접적으로 연결되기 때문에,  
+보다 안정적이고 확장 가능한 통신 구조가 필요하였다.
+
+이에 따라 중앙 Broker 없이 Publisher와 Subscriber가  
+Topic 기반으로 직접 통신할 수 있는 DDS(Data Distribution Service) 미들웨어를 도입하였다.
+
+DDS는 Low Latency 기반 실시간 데이터 전송과  
+QoS(Quality of Service) 기반 데이터 전달 제어를 지원하며,  
+Loose Coupling 구조를 통해 APP 간 의존성을 낮출 수 있다는 장점이 있다.
+
+또한 Pub/Sub 기반 구조를 통해 높은 확장성을 제공하기 때문에,  
+실시간 제어 기반 반도체 장비 환경에 적합한 통신 미들웨어로 판단하였다.
+
+향후 APP 단위 서비스 분리 및 MSA 구조 확장을 고려하여,  
+유연한 분산 통신 인프라를 구축하는 방향으로 아키텍처를 설계하였다.
+
 
 ### DDS 개요
 
-DDS(Data Distribution Service)는 중앙 브로커 없이 Publisher와 Subscriber가
-Topic 기반으로 직접 통신하는 분산형 Pub/Sub 미들웨어이다.
+DDS(Data Distribution Service)는 중앙 Broker 없이  
+Publisher와 Subscriber가 Topic 기반으로 직접 통신하는  
+분산형 Pub/Sub 미들웨어이다.
 
-DDS는 실시간 시스템(real-time system)을 주요 대상으로 설계되었으며,
-낮은 지연 시간(Low Latency), QoS(Quality of Service) 기반 데이터 전달 보장,
-그리고 느슨한 결합(Loose Coupling) 구조를 핵심 특징으로 가진다.
+DDS는 실시간 시스템(Real-Time System)을 주요 대상으로 설계되었으며,
 
-이러한 특성으로 인해 DDS는 통신 지연이나 데이터 유실이 시스템 안정성에 직접적인 영향을 미치는
-실시간 제어 시스템에 적합한 통신 미들웨어로 활용된다.
+- Low Latency 기반 실시간 데이터 전송
+- QoS(Quality of Service) 기반 데이터 전달 보장
+- Loose Coupling 구조 기반 APP 간 독립성 확보
+- 분산 환경에서의 안정적인 통신 지원
+
+등의 특징을 가진다.
+
+이러한 특성으로 인해 DDS는 통신 지연이나 데이터 유실이  
+시스템 안정성에 직접적인 영향을 미치는  
+실시간 제어 시스템 환경에서 널리 활용되고 있다.
 
 <img src="images/dds.png" alt="DDS Architecture Diagram" width="600"/>
 
 ---
 
-### 시스템 아키텍처
+## 2. 시스템 아키텍처
 각 APP은 자체 DDS Core를 내장하고 있으며,  
 하나의 프로세스 내에서 Publisher와 Subscriber 역할을 동시에 수행하도록 설계되어 있다.
 
@@ -73,16 +104,9 @@ DDS 기반 APP 간 통신은 다음과 같은 흐름으로 이루어진다.
 4. **병렬 수신 및 처리**  
    - Subscriber 측에서는 Listener 및 Thread 기반 구조를 통해 Topic별 데이터를 병렬로 수신 및 처리한다.
 
-### 프로젝트 목표
-- Socket API 기반 복잡한 Server-Client 구조 제거
-- APP 간 통신 구조 단순화 및 확장성 확보
-- 실시간 제어 시스템에 적합한 저지연 통신 구조 구현
-- DDS QoS 기반 안정적인 데이터 전달 환경 구축
-- MA → MSA 아키텍처 전환 기반 마련
-
 ---
 
-## 2. 담당 역할
+## 3. 담당 역할
 
 ### DDS Publisher / Subscriber 개발
 - Python / C++ 기반 DDS Publisher 및 Subscriber 구현
@@ -105,7 +129,7 @@ DDS 기반 APP 간 통신은 다음과 같은 흐름으로 이루어진다.
 
 ---
 
-## 3. 기술적 문제 및 해결
+## 4. 기술적 문제 및 해결
 
 ### 문제 1. 대용량 데이터 전송 시 커맨드 메시지 지연 및 유실
 
@@ -257,7 +281,7 @@ DDS Listener는 수신 이벤트 전달에만 집중하고 즉시 반환하도�
 
 ---
 
-## 4. 결과 및 성과
+## 5. 결과 및 성과
 
 - DDS 통신 모듈 개선 후 시스템 메시지 전달 지연 시간 1ms 수준으로 구현
   - 실시간 제어 요구사항을 만족하는 응답 성능 확보
@@ -281,7 +305,7 @@ DDS 데이터 시각화 툴을 활용하여
 
 ---
 
-## 5. 사용 기술
+## 6. 사용 기술
 
 - Language
   - Python
@@ -302,7 +326,7 @@ DDS 데이터 시각화 툴을 활용하여
 
 ---
 
-## 6. 프로젝트 의의
+## 7. 프로젝트 의의
 
 본 프로젝트는 단순히 통신 방식을 변경하는 수준을 넘어,  
 실시간 제어 시스템에 적합한 통신 아키텍처를 재설계한 사례이다.
