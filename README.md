@@ -73,16 +73,17 @@ DDS는 실시간 시스템(Real-Time System)을 주요 대상으로 설계되었
 
 ## 2. 시스템 아키텍처
 각 APP은 자체 DDS Core를 내장하고 있으며,  
-하나의 프로세스 내에서 Publisher와 Subscriber 역할을 동시에 수행하도록 설계되어 있다.
+하나의 프로세스 내에서 Publisher와 Subscriber 역할을 동시에 수행하도록 설계하였다.
 
-이러한 구조를 통해 각 APP은  
-데이터를 생산하는 동시에 소비하는 독립적인 노드로 동작하며,  
-외부 통신 서버나 중앙 브로커에 의존하지 않고  
-DDS Discovery 메커니즘을 통해 필요한 상대 APP과 직접 통신한다.
+이를 통해 각 APP은 데이터를 생산(Publish)하면서 동시에 소비(Subscribe)하는  
+독립적인 노드(Node) 형태로 동작한다.
 
-즉, 특정 APP이 장애를 일으키더라도  
-전체 통신 구조에는 영향을 주지 않는  
-분산형(Peer-to-Peer) 통신 구조를 구성하였다.
+또한 외부 통신 서버나 중앙 Broker에 의존하지 않고,  
+DDS Discovery 메커니즘을 통해 필요한 상대 APP을 자동 탐색하여 직접 통신하도록 구성하였다.
+
+이러한 구조를 통해 특정 APP 장애 발생 시에도  
+전체 통신 구조에 영향을 최소화할 수 있는  
+분산형(Peer-to-Peer) 통신 구조를 구현하였다.
 
 <img src="images/architecture.png" alt="Application-level DDS Architecture with Embedded DDS Core" width="650"/>
 
@@ -91,18 +92,18 @@ DDS Discovery 메커니즘을 통해 필요한 상대 APP과 직접 통신한다
 ### DDS Communication Flow
 DDS 기반 APP 간 통신은 다음과 같은 흐름으로 이루어진다.
 
+1. **Discovery 및 자동 매칭**
+   - DDS Discovery 기능을 통해 Publisher와 Subscriber가 자동으로 탐색 및 연결된다.
 
-1. **Discovery 및 자동 매칭**  
-   - DDS Discovery 기능을 통해 Publisher와 Subscriber가 자동으로 서로를 탐색하고 연결된다.
-  
-2. **데이터 발행**
-   - 각 APP은 필요에 따라 Topic 기반으로 데이터를 발행(Publish)한다.
+2. **데이터 발행(Publish)**
+   - 각 APP은 Topic 기반으로 데이터를 발행한다.
 
-3. **DDS Core 처리**  
-   - DDS Core 내부에서 QoS 정책이 적용되고 데이터가 라우팅된다.
+3. **DDS Core 처리**
+   - DDS Core 내부에서 QoS 정책 적용 및 데이터 라우팅이 수행된다.
 
-4. **병렬 수신 및 처리**  
-   - Subscriber 측에서는 Listener 및 Thread 기반 구조를 통해 Topic별 데이터를 병렬로 수신 및 처리한다.
+4. **데이터 수신 및 처리**
+   - Subscriber 측에서는 Listener 및 Thread 기반 구조를 통해
+     Topic별 데이터를 병렬로 수신 및 처리한다.
 
 ---
 
